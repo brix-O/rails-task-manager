@@ -1,0 +1,17 @@
+
+<div class="flex">
+  <h1><%= @task.title %></h1>
+  <i class="far fa-edit"><%= link_to "Edit this task", edit_path %></i>
+</div>
+
+<h2 class="details"><%= @task.details %></h2>
+
+<% if @task.completed == true %>
+ <i class="far fa-check-square"> This Task is Completed</i>
+<% else %>
+  <i class="far fa-square"> This Task is Completed</i>
+<% end %>
+
+<p><%= link_to "Back to list", tasks_path %></p>
+
+
